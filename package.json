@@ -2,7 +2,7 @@
   "name": "s-dumi",
   "version": "1.0.0",
   "description": "Convert numbers to words in Bulgarian",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "left-pad": "^1.1.3"
   },
