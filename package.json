@@ -23,5 +23,10 @@
     "bulgarian"
   ],
   "author": "Georgi Stefanov",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": "https://github.com/moxata/s-dumi/issues",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/moxata/s-dumi.git"
+  }
 }
