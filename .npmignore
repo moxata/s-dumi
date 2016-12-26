@@ -1,0 +1,6 @@
+src/
+coverage/
+__tests__/
+*.test.js
+jest.json
+.babelrc
