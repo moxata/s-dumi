@@ -1,6 +1,6 @@
 {
   "name": "s-dumi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert numbers to words in Bulgarian",
   "main": "lib/index.js",
   "dependencies": {
