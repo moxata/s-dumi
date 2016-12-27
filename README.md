@@ -3,6 +3,8 @@
 
 # s-dumi
 
+Number to words (number spelling) in Bulgarian
+
 ## How to use?
 
 ```javascript
