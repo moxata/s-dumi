@@ -3,4 +3,8 @@ coverage/
 __tests__/
 *.test.js
 jest.json
+.eslint*
+.travis.yml
+.codeclimate.yml
+.coveralls.yml
 .babelrc
