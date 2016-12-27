@@ -46,7 +46,7 @@ function buildTriList(suma) {
             isPlural: false,
             res: "",
         };
-        newTri.isPlural = (parseInt(newTri.s) !== 1);
+        newTri.isPlural = (parseInt(newTri.s, 10) !== 1);
         if (newTri.s !== "000") {
             triList.push(newTri);
         }
@@ -110,14 +110,14 @@ export function sDumiCialaChast(suma) {
                     // не се казва "една хиляда"
                     tri.res = "";  
                 } else {
-                    tri.res = EDINICI(parseInt(s), EXP_TO_ROD[tri.exp]);
+                    tri.res = EDINICI(parseInt(s, 10), EXP_TO_ROD[tri.exp]);
                 }
                 
             } else {
                 
-                tri.res = DESETICI[parseInt(s[1])];
+                tri.res = DESETICI[parseInt(s[1], 10)];
                 if (s[2] !== "0") {
-                    tri.res += " и " + EDINICI(parseInt(s[2]), EXP_TO_ROD[tri.exp]);
+                    tri.res += " и " + EDINICI(parseInt(s[2], 10), EXP_TO_ROD[tri.exp]);
                     tri.hasI = true;
                 }
                 
@@ -125,8 +125,8 @@ export function sDumiCialaChast(suma) {
             
         } else {
             
-            tri.res = STOTICI[parseInt(s[0])];
-            let dvu = parseInt(s[1] + s[2]);
+            tri.res = STOTICI[parseInt(s[0], 10)];
+            let dvu = parseInt(s[1] + s[2], 10);
             if (dvu > 0) {
                 if (s[1] <= "1") {
                     tri.res += " и " + EDINICI(dvu, EXP_TO_ROD[tri.exp]);
@@ -136,9 +136,9 @@ export function sDumiCialaChast(suma) {
                         tri.res += " и";
                         tri.hasI = true;
                     }
-                    tri.res += " " + DESETICI[parseInt(s[1])];
+                    tri.res += " " + DESETICI[parseInt(s[1], 10)];
                     if (s[2] !== "0") {
-                        tri.res += " и " + EDINICI(parseInt(s[2]), EXP_TO_ROD[tri.exp]);
+                        tri.res += " и " + EDINICI(parseInt(s[2], 10), EXP_TO_ROD[tri.exp]);
                         tri.hasI = true;
                     }
                 }
