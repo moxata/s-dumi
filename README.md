@@ -3,7 +3,7 @@
 
 # s-dumi
 
-Number to words (number spelling) in Bulgarian
+Number to words (number spelling) in Bulgarian. Version 1.1.0 adds support for EURO. You must pass "евро" as a second parameter.
 
 ## How to use?
 
@@ -12,5 +12,5 @@ import { sDumi } from 's-dumi';
 
 ...
 
-let words = sDumi(123.12); 
+let words = sDumi(123.12, 'евро'); 
 ```
