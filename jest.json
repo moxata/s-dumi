@@ -1,5 +1,5 @@
 {
-    "transform": {".*": "<rootDir>/node_modules/babel-jest"},
+    "transform": {".*": "babel-jest"},
     "roots": ["src/"],
     "collectCoverage": true
 }
