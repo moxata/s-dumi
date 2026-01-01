@@ -61,11 +61,13 @@ function EDINICI(n, rod) {
         case 1: 
             if (rod === ROD_JENSKI) {
                 return "една";
-            } else {
+            } else if (rod === ROD_MUJKI) {
                 return "един";
+            } else {
+                return "едно";
             }
         case 2: 
-            if (rod === ROD_JENSKI) {
+            if (rod === ROD_JENSKI || rod === ROD_X) {
                 return "две";
             } else {
                 return "два";
@@ -89,11 +91,13 @@ function frac(suma) {
     }
 }
 
-export function sDumiCialaChast(suma) {
+export function sDumiCialaChast(suma, rod) {
     suma = Math.trunc(suma);
     if (suma === 0) {
         return "нула";
     }
+
+    EXP_TO_ROD[0] = rod;
     
     let isPlus = (suma >= 0);
     let triList = buildTriList(suma);
@@ -167,7 +171,11 @@ export function sDumiCialaChast(suma) {
 }
 
 export function sDumi(suma, valuta="лв.") {
-    let s = sDumiCialaChast(Math.trunc(suma)) + " " + valuta;
+    let rod = ROD_X;
+    if (valuta === "лев" || valuta === "лева" || valuta === "лв.") {
+        rod = ROD_MUJKI;
+    }
+    let s = sDumiCialaChast(Math.trunc(suma), rod) + " " + valuta;
     let stot = frac(suma);
     stot = leftPad(stot, 2, "0");
     s += ` и ${stot} ст.`;
